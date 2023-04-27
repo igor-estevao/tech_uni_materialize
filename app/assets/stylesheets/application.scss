@@ -1,0 +1,20 @@
+/*
+ *= require_tree .
+ *= require_self
+ *= require material_icons
+ */
+@import "./custom_material.scss";
+@import "materialize";
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+
+ body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+    

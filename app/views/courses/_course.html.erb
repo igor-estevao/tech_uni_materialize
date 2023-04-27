@@ -1,0 +1,16 @@
+<div class="col s6 m6">
+  <div class="card blue-grey darken-1">
+    <div class="card-content white-text">
+      <span class="card-title"><%= course.name %> (<%= course.short_name %>)</span>
+      <p><%= course.description %></p>
+    </div>
+    <div class="card-action">
+    
+      <% if logged_in? and course.in? current_user.courses %>
+        <a href="#">Visit Course Page</a>
+      <% else %>
+        <%= link_to("Enroll on this Course", course_enroll_self_path(course)) %>
+      <% end %>
+    </div>
+  </div>
+</div>

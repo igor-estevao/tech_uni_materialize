@@ -1,0 +1,32 @@
+<div class="card-panel">
+  <h3 class="center-align">Log In!</h3>
+  <div class="container">
+    <div class="row center">
+      <div class="col s12 m12 l12">
+        <%= form_with(url: create_session_path, html: {class: "col s12", data: {turbo: :false}}) do |f| %>
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.label :email %>
+              <%= f.email_field :email, placeholder: "Place your email", autofocus: true %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.label :password %>
+              <%= f.password_field :password, placeholder: "Place your password" %>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="input-field col s12">
+              <%= f.button type: :submit, class:"btn waves-effect waves-light right" do %>
+                Log In<i class="material-icons right">send</i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

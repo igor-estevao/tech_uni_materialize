@@ -1,0 +1,33 @@
+<div class="row">
+  <%= form_for(@student, html: {class: "col s12", data: {turbo: :false}}) do |f| %>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.text_field :name, autofocus: true %>
+        <%= f.label :name %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.email_field :email %>
+        <%= f.label :email %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.password_field :password, placeholder: "Set your Password here." %>
+        <%= f.label :password %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.password_field :password_confirmation, placeholder: "Confirm your Password." %>
+        <%= f.label :password_confirmation %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="input-field col s12">
+        <%= f.button type: :submit, class:"btn waves-effect waves-light right" %>
+      </div>
+    </div>
+  <% end %>
+</div>

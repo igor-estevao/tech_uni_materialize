@@ -1,0 +1,9 @@
+<ul id="nav-mobile" class="right right hide-on-med-and-down">
+  <%= render "shared/nav_links" %>
+  <li>
+    <%= link_to "#!", class: "dropdown-trigger", data: { target: "students_drop2" } do %>
+      <%= tag.span(logged_in? ? "Welcome #{current_user.name}" : "Account") %>
+      <%= tag.i("account_circle", class: "material-icons right") %>
+    <% end %>
+  </li>
+</ul>

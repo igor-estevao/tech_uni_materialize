@@ -1,0 +1,27 @@
+<% if logged_in? %>
+  <%= tag.li do %>
+    <%= link_to student_path(current_user) do %>
+      <%= tag.i("person", class: "material-icons") %>
+      <%= tag.span("My Account") %>
+    <% end %>
+  <% end %>
+  <%= tag.li do %>
+    <%= link_to logout_path do %>
+      <%= tag.i("logout", class: "material-icons") %>
+      <%= tag.span("logout") %>
+    <% end %>
+  <% end %>
+<% else %>
+  <%= tag.li do %>
+    <%= link_to login_path do %>
+      <%= tag.i("login", class: "material-icons") %>
+      <%= tag.span "Login" %>
+    <% end %>
+  <% end %>
+  <%= tag.li do %>
+    <%= link_to new_student_path do %>
+      <%= tag.i("person_add", class: "material-icons") %>
+      <%= tag.span "Sign Up" %>
+    <% end %>
+  <% end %>  
+<% end %>
