@@ -3,7 +3,6 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import * as material from "./material"
 
-// document.addEventListener('turbo:render', () => M.AutoInit())
 document.addEventListener('turbo:load', () => {
   material.autoinitMaterial()
 })

@@ -22,11 +22,12 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
-    @student.password = Faker::Internet.password
-    @student.creator_id = current_user.id
+    @student.password = Faker::Internet.password if @student.password.nil?
+    @student.creator_id = Student.first.id
     respond_to do |format|
       if @student.save
         flash[:notice] = "Welcome #{@student.name}! Feel free to Explore!"
+        session[:student_id] = @student.id
         format.html { redirect_to root_path }
       else
         flash.now[:error] = @student.errors.full_messages.to_sentence

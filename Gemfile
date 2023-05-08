@@ -50,6 +50,7 @@ gem "materialize-sass"
 
 # To use Material Icons [https://github.com/Angelmmiguel/material_icons]
 gem "material_icons"
+
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
